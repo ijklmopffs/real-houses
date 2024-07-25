@@ -5,7 +5,6 @@ import familyImg from "./assets/family.png";
 import arrowIcon from "./assets/Arrow right.svg";
 import phoneIcon from "./assets/Phone.svg";
 import houseImg from "./assets/house.png";
-import stairsImg from "./assets/stairs.png";
 import casterly from "./assets/casterly.png";
 import pinang from "./assets/pinang.png";
 import southGrove from "./assets/south.png";
@@ -135,14 +134,9 @@ function App() {
           <h2 className="text-[#203239] font-semibold text-4xl">
             Favorite Resident
           </h2>
-          <div className="mt-10 flex flex-col md:flex-row justify-between gap-20 md:gap-0">
-            <div className="flex">
+          <div className="mt-10 flex flex-col md:flex-row justify-between gap-20 lg:gap-0">
+            <div>
               <img src={houseImg} alt="" />
-              <img
-                src={stairsImg}
-                alt=""
-                className="hidden md:block relative right-96 lg:right-80 top-36"
-              />
             </div>
             <div className="space-y-10">
               <h2 className="text-[#203239] text-4xl font-semibold">
@@ -172,9 +166,9 @@ function App() {
         <h2 className="text-[#203239] font-semibold text-4xl">
           Residents of Various Cities
         </h2>
-        <div className="mt-10 flex flex-col lg:flex-row items-center justify-between gap-4 md:gap-0">
+        <div className="mt-10 flex flex-col lg:flex-row items-center justify-between gap-4 md:gap-8 lg:gap-0">
           <div>
-            <img src={casterly} alt="" />
+            <img src={casterly} alt="" className="mx-auto" />
             <h2 className="text-[#203239] text-2xl font-medium mt-3">
               Casterly Rock
             </h2>
@@ -184,7 +178,7 @@ function App() {
           </div>
 
           <div>
-            <img src={pinang} alt="" />
+            <img src={pinang} alt="" className="mx-auto" />
             <h2 className="text-[#203239] text-2xl font-medium mt-3">
               Pinang Residences
             </h2>
@@ -194,7 +188,7 @@ function App() {
           </div>
 
           <div>
-            <img src={southGrove} alt="" />
+            <img src={southGrove} alt="" className="mx-auto" />
             <h2 className="text-[#203239] text-2xl font-medium mt-3">
               South Grove
             </h2>
