@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../assets/logo-white.svg";
+import logo from "../assets/logo-black.svg";
 import menu from "../assets/menu.svg";
 import close from "../assets/close.svg";
 
@@ -11,12 +11,12 @@ export default function Navbar() {
   };
 
   return (
-    <main className="bg-slate-900">
-      <div className="max-w-7xl mx-auto flex items-center justify-between p-8 text-white">
+    <main>
+      <div className="max-w-[100rem] mx-auto flex items-center justify-between p-8 text-white">
         <img src={logo} alt="logo" />
-        <nav className="space-x-4 hidden md:block">
+        <nav className="space-x-20 hidden md:block text-[#203239]">
           <a href="/">Home</a>
-          <a href="/">About Us</a>
+          <a href="/">About</a>
           <a href="/">Properties</a>
           <a href="/">Contact</a>
         </nav>

@@ -1,251 +1,206 @@
-import "./App.css";
 import Navbar from "./components/Navbar";
-import bgImg from "./assets/room-bg.jpg";
-import searchIcon from "./assets/icons8-search.svg";
-import expertIcon from "./assets/expert.png";
-import smoothIcon from "./assets/smooth.png";
-import varietyIcon from "./assets/variety.png";
-import mansion from "./assets/mansion.jpg";
-import mansion3 from "./assets/mansion3.jpg";
-import bed3 from "./assets/3bed.jpg";
-import bed4 from "./assets/4bed.jpg";
-import bed5 from "./assets/5bed.jpg";
-import bed6 from "./assets/6bed.jpg";
-import agentIcon from "./assets/agent.png";
-import investingIcon from "./assets/investing.png";
-import managementIcon from "./assets/management.png";
+import "./App.css";
+import locationIcon from "./assets/Location.svg";
+import familyImg from "./assets/family.png";
+import arrowIcon from "./assets/Arrow right.svg";
+import phoneIcon from "./assets/Phone.svg";
+import houseImg from "./assets/house.png";
+import stairsImg from "./assets/stairs.png";
+import casterly from "./assets/casterly.png";
+import pinang from "./assets/pinang.png";
+import southGrove from "./assets/south.png";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <section className="relative">
-        <img src={bgImg} alt="" className="h-[350px] md:h-auto" />
-        <div className="absolute top-2/4 md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 space-y-5">
-          <div>
-            <h1 className="text-3xl md:text-7xl font-extrabold text-slate-900 capitalize">
-              Find the perfect property for you.
+      <header className="bg-[#eeedde]">
+        <Navbar />
+
+        <section className="flex flex-col md:flex-row p-8 items-center mt-10 justify-between text-start max-w-[100rem] mx-auto">
+          <div className="space-y-6">
+            <h1 className="font-semibold text-5xl md:text-6xl text-[#203239]">
+              Find Family Housing <br /> According to Your Desires
             </h1>
-            <p className="text-white text-lg md:text-3xl">
-              Our mission is to give you the best homes for the best price, and
-              most especially, the home that is perfect for you.
+            <p className="text-[#203239]/55 w-96">
+              Providing housing for your family with a variety of choices and
+              strategic locations in your city in an easier way.
+            </p>
+            <div className="md:w-fit flex items-center">
+              <img src={locationIcon} alt="" className="absolute m-2" />
+              <input
+                type="text"
+                placeholder="Search location, properties, residential groups"
+                className="p-6 pl-10 rounded-md border-2 focus:outline-none w-11/12 md:w-[40rem]"
+              />
+              <button className="bg-[#203239] absolute right-16 md:relative md:right-28 text-white px-6 py-3 rounded-md shadow-md">
+                Search
+              </button>
+            </div>
+            <div className="flex flex-col md:flex-row md:items-center gap-6 mt-10 justify-between">
+              <div className="w-48">
+                <h2 className="font-semibold text-6xl text-[#203239]">
+                  200<span className="text-5xl text-[#ff7527]">+</span>
+                </h2>
+                <p className="text-[#203239]/55">
+                  Residential groups has joined
+                </p>
+              </div>
+              <div className="w-48">
+                <h2 className="font-semibold text-6xl text-[#203239]">
+                  10<span className="text-4xl text-[#ff7527]">years</span>
+                </h2>
+                <p className="text-[#203239]/55">
+                  Already experienced in the market
+                </p>
+              </div>
+              <div className="w-48">
+                <h2 className="font-semibold text-6xl text-[#203239]">
+                  999<span className="text-5xl text-[#ff7527]">+</span>
+                </h2>
+                <p className="text-[#203239]/55">
+                  Properties available in various Cities
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src={familyImg} alt="" />
+          </div>
+        </section>
+      </header>
+
+      <section className="p-8 max-w-[100rem] mx-auto lg:text-start my-20">
+        <h2 className="text-[#203239] text-4xl font-semibold md:w-96 md:mx-auto lg:mx-0">
+          Easy and Fast Property Purchase Stages
+        </h2>
+        <div className="mt-10 flex flex-wrap justify-center lg:flex-row items-center gap-8 lg:justify-between">
+          <div className="rounded-md border-2 border-[#eeedde] w-64 h-72 p-6">
+            <div className="flex items-center justify-between">
+              <h3 className="text-[#203239] text-lg font-semibold">
+                Select properties
+              </h3>
+              <span className="text-[#ff7527] font-bold">01</span>
+            </div>
+            <p className="text-[#203239]/55 my-5">
+              Find the desired property according to the criteria for you and
+              your family. You can read more about how to choose property wisely
+              here
+            </p>
+            <div className="flex items-center gap-1 hover:underline cursor-pointer">
+              <p>Read More</p>
+              <img src={arrowIcon} alt="" />
+            </div>
+          </div>
+
+          <div className="rounded-md border-2 border-[#eeedde] w-64 h-72 p-6">
+            <div className="flex items-center justify-between">
+              <h3 className="text-[#203239] text-lg font-semibold">
+                Process Booking
+              </h3>
+              <span className="text-[#ff7527] font-bold">02</span>
+            </div>
+            <p className="text-[#203239]/55 my-5">
+              Payment in the form of a certain amount of money as a commitment
+              to order a certain property unit.
+            </p>
+            <div className="flex items-center gap-1 hover:underline cursor-pointer mt-12">
+              <p>Read More</p>
+              <img src={arrowIcon} alt="" />
+            </div>
+          </div>
+
+          <div className="rounded-md border-2 border-[#eeedde] w-64 h-72 p-6">
+            <div className="flex items-center justify-between">
+              <h3 className="text-[#203239] text-lg font-semibold">
+                Mortgage and Certification
+              </h3>
+              <span className="text-[#ff7527] font-bold">03</span>
+            </div>
+            <p className="text-[#203239]/55 my-5">
+              KPR financing for home buyers with a financing scheme if necessary
+              and continued with the HGB certification process.
+            </p>
+            <div className="flex items-center gap-1 hover:underline cursor-pointer">
+              <p>Read More</p>
+              <img src={arrowIcon} alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#eeedde]">
+        <div className="p-8 max-w-[100rem] mx-auto text-start">
+          <h3 className="text-[#ff7527] font-medium">Consumer choice</h3>
+          <h2 className="text-[#203239] font-semibold text-4xl">
+            Favorite Resident
+          </h2>
+          <div className="mt-10 flex flex-col md:flex-row justify-between gap-20 md:gap-0">
+            <div className="flex">
+              <img src={houseImg} alt="" />
+              <img
+                src={stairsImg}
+                alt=""
+                className="hidden md:block relative right-96 lg:right-80 top-36"
+              />
+            </div>
+            <div className="space-y-10">
+              <h2 className="text-[#203239] text-4xl font-semibold">
+                The building was designed by Aristektur Handal
+              </h2>
+              <p className="text-[#203239] w-96">
+                Without a doubt, the properties provided on our website are the
+                result of professional collaboration with well-known architects
+                and trusted developers.
+              </p>
+              <div className="flex items-center gap-4">
+                <button className="flex items-center gap-4 px-8 md:px-12 py-2 border-2 border-[#203239] rounded-lg">
+                  <img src={phoneIcon} alt="" />
+                  Contact us
+                </button>
+                <button className="bg-[#203239] border-2 rounded-lg px-8 md:px-16 py-3 text-white">
+                  Explore more
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-[100rem] mx-auto mt-40 lg:text-start p-8">
+        <h3 className="text-[#ff7527] font-medium">Auditor&apos;s Choice</h3>
+        <h2 className="text-[#203239] font-semibold text-4xl">
+          Residents of Various Cities
+        </h2>
+        <div className="mt-10 flex flex-col lg:flex-row items-center justify-between gap-4 md:gap-0">
+          <div>
+            <img src={casterly} alt="" />
+            <h2 className="text-[#203239] text-2xl font-medium mt-3">
+              Casterly Rock
+            </h2>
+            <p className="text-[#203239] font-light">
+              123 Broadway Ave, Suite 800, Manhattan, New York, NY 10036
             </p>
           </div>
-          <div className="space-x-3 gap-2 md:gap-0 flex flex-col md:flex-row items-center justify-center">
-            <select
-              name=""
-              id=""
-              className="w-96 p-3 pl-2 md:p-6 md:pl-4 border-2 rounded-md border-gray-300 focus:outline-none"
-            >
-              <option
-                value=""
-                disabled
-                selected
-                hidden
-                className="text-gray-300"
-              >
-                Location
-              </option>
-              <option value="Abuja">Abuja</option>
-              <option value="Enugu">Enugu</option>
-              <option value="Lagos">Lagos</option>
-            </select>
 
-            <select
-              name=""
-              id=""
-              className="w-96 p-3 pl-2 md:p-6 md:pl-4 border-2 rounded-md border-gray-300 focus:outline-none"
-            >
-              <option
-                value=""
-                disabled
-                selected
-                hidden
-                className="text-gray-300"
-              >
-                Status
-              </option>
-              <option value="rent">For Rent</option>
-              <option value="sale">For sale</option>
-            </select>
-
-            <button className="bg-blue-400 w-full md:w-auto justify-center md:justify-normal p-4 rounded-md text-white text-lg flex items-center gap-2">
-              <img src={searchIcon} alt="search icon" className="w-8 h-8" />
-              Search
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section className="my-40">
-        <h2 className="font-bold text-6xl my-10">Why choose us?</h2>
-        <div className="flex md:flex-wrap lg:flex-nowrap md:justify-center flex-col md:flex-row items-center gap-20 lg:justify-between max-w-7xl mx-auto">
-          <div className="">
-            <img src={expertIcon} alt="expert" className="mb-5 mx-auto" />
-            <div>
-              <h2 className="text-2xl font-bold">Expert knowledge</h2>
-              <p className="text-xl w-96">
-                Take advantage of our deep knowledge and experience in the real
-                estate market.
-              </p>
-            </div>
-          </div>
           <div>
-            <img
-              src={varietyIcon}
-              alt="comprehensive"
-              className="mx-auto mb-9"
-            />
-            <div>
-              <h2 className="text-2xl font-bold">Comprehensive</h2>
-              <p className="text-xl w-96">
-                Explore a variety of property listings, from buying and renting
-                to Airbnb opportunities.
-              </p>
-            </div>
-          </div>
-          <div>
-            <img src={smoothIcon} alt="seamless" className="mb-5 mx-auto" />
-            <div>
-              <h2 className="text-2xl font-bold">Seamless</h2>
-              <p className="text-xl w-96">
-                Experience a smooth journey from your first consultation to
-                closing the deal.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="my-40">
-        <h2 className="font-bold text-6xl my-8">Properties</h2>
-        <p className="text-3xl text-gray-600">
-          Find exceptional properties listed by our trusted real estate agents
-        </p>
-
-        <div className="flex flex-col md:justify-center lg:justify-normal md:flex-row items-center gap-8 max-w-7xl mx-auto flex-wrap my-20">
-          <div className="w-96 rounded-md border-2">
-            <img src={mansion} alt="" className="" />
-            <div className="space-y-3 p-8">
-              <h2 className="text-3xl text-slate-900 font-semibold">
-                Modern mansion
-              </h2>
-              <p className="text-xl font-semibold text-slate-800">
-                ₦10,000,000
-              </p>
-              <p className="text-slate-700 text-lg">Condo</p>
-            </div>
-          </div>
-
-          <div className="w-96 rounded-md border-2">
-            <img src={mansion3} alt="" />
-            <div className="space-y-3 p-8">
-              <h2 className="text-3xl text-slate-900 font-semibold">
-                Modern mansion
-              </h2>
-              <p className="text-xl font-semibold text-slate-800">
-                ₦15,000,000
-              </p>
-              <p className="text-slate-700 text-lg">Mansion</p>
-            </div>
-          </div>
-
-          <div className="w-96 rounded-md border-2">
-            <img src={bed3} alt="" />
-            <div className="space-y-3 p-8">
-              <h2 className="text-3xl text-slate-900 font-semibold">
-                Modern Apartment
-              </h2>
-              <p className="text-xl font-semibold text-slate-800">₦2,000,000</p>
-              <p className="text-slate-700 text-lg">Apartment</p>
-            </div>
-          </div>
-
-          <div className="w-96 rounded-md border-2">
-            <img src={bed4} alt="" />
-            <div className="space-y-3 p-8">
-              <h2 className="text-3xl text-slate-900 font-semibold">
-                Modern Apartment
-              </h2>
-              <p className="text-xl font-semibold text-slate-800">₦3,000,000</p>
-              <p className="text-slate-700 text-lg">Apartment</p>
-            </div>
-          </div>
-
-          <div className="w-96 rounded-md border-2">
-            <img src={bed5} alt="" />
-            <div className="space-y-3 p-8">
-              <h2 className="text-3xl text-slate-900 font-semibold">
-                Modern Apartment
-              </h2>
-              <p className="text-xl font-semibold text-slate-800">₦4,000,000</p>
-              <p className="text-slate-700 text-lg">Apartment</p>
-            </div>
-          </div>
-
-          <div className="w-96 rounded-md border-2">
-            <img src={bed6} alt="" />
-            <div className="space-y-3 p-8">
-              <h2 className="text-3xl text-slate-900 font-semibold">
-                Modern Apartment
-              </h2>
-              <p className="text-xl font-semibold text-slate-800">₦5,000,000</p>
-              <p className="text-slate-700 text-lg">Apartment</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2 className="font-bold text-slate-900 text-6xl my-8">Our Services</h2>
-        <p className="text-3xl text-gray-600">
-          Our brokers offers top services for buying, renting, and Airbnb
-          management. Let us help you find the perfect property.
-        </p>
-
-        <div className="max-w-7xl md:flex-wrap lg:flex-nowrap mx-auto flex flex-col md:flex-row items-center gap-20 justify-center my-20">
-          <div>
-            <img src={agentIcon} alt="agent" className="mx-auto mb-3" />
-            <div>
-              <h2 className="text-3xl text-slate-900 font-semibold">
-                Real Estate Agent
-              </h2>
-              <p className="text-lg text-slate-700">
-                We serve as your agent for real estate deals, <br /> giving you
-                the very best deals.
-              </p>
-            </div>
+            <img src={pinang} alt="" />
+            <h2 className="text-[#203239] text-2xl font-medium mt-3">
+              Pinang Residences
+            </h2>
+            <p className="text-[#203239] font-light">
+              123 Broadway Ave, Suite 800, Manhattan, New York, NY 10036
+            </p>
           </div>
 
           <div>
-            <img src={investingIcon} alt="investing" className="mx-auto mb-3" />
-            <div>
-              <h2 className="text-3xl text-slate-900 font-semibold">
-                Property Investing
-              </h2>
-              <p className="text-lg text-slate-700">
-                We help you invest with our expert knowledge, <br /> making you
-                tremendous profit.
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <img
-              src={managementIcon}
-              alt="management"
-              className="mx-auto mb-3"
-            />
-            <div>
-              <h2 className="text-3xl text-slate-900 font-semibold">
-                Property Management
-              </h2>
-              <p className="text-lg text-slate-700">
-                We help you manage your properties, <br /> so you can have peace
-                of mind.
-              </p>
-            </div>
+            <img src={southGrove} alt="" />
+            <h2 className="text-[#203239] text-2xl font-medium mt-3">
+              South Grove
+            </h2>
+            <p className="text-[#203239] font-light">
+              123 Broadway Ave, Suite 800, Manhattan, New York, NY 10036
+            </p>
           </div>
         </div>
       </section>
